@@ -5,6 +5,21 @@
 **Cyberpunk Grid Runner** es una simulación de lógica interna para un juego táctico en cuadrícula 2D. El jugador controla a un "Hacker" que debe evadir a los "Drones de Seguridad" (NPCs con IA de patrulla y persecución) mientras se desplaza por el entorno. El objetivo del motor es procesar el movimiento, gestionar las colisiones en la cuadrícula y coordinar los estados globales del juego (Menú, Jugando, Pausa, Game Over).
 
 ---
+## 1.1 Gestión de Repositorios (Flujo de Trabajo Git-Flow Adaptado)
+
+Para el ciclo de desarrollo de **Cyberpunk Grid Runner**, se ha implementado un flujo de trabajo basado en **Git-Flow** adaptado a las necesidades del proyecto. Esto garantiza un historial de cambios limpio, estabilidad en producción y un desarrollo modular de las características del motor.
+
+### 🌳 Estructura de Ramas
+El repositorio está organizado estrictamente en tres niveles de ramas:
+* **`main`**: Es la rama de producción. Contiene únicamente código 100% estable, testeado y listo para su ejecución final. Cada actualización aquí representa una versión completada del motor de juego.
+* **`develop`**: Es la rama de integración. Aquí se unifican todas las nuevas funciones desarrolladas por el equipo antes de pasar a la rama principal. Es el espacio de trabajo del estado "actual" del desarrollo.
+* **`feature/*`**: Son las ramas temporales de características (por ejemplo: `feature/colisiones`, `feature/ia-enemigo`, `feature/documentacion`). Se crean siempre a partir de `develop` y se destruyen una vez que la funcionalidad está terminada, revisada e integrada de vuelta en `develop`.
+
+### 🔄 Flujo de Trabajo Diario
+1. **Creación de Funcionalidad:** Para trabajar en un nuevo módulo, se abre una rama específica desde integración:
+   ```bash
+   git checkout develop
+   git checkout -b feature/nombre-de-la-funcion
 
 ## 2. Arquitectura del Software
 El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientada a Objetos (POO), limitando el acoplamiento y encapsulando la lógica en 5 clases esenciales:
