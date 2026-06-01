@@ -22,7 +22,7 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
 ### A. Diagrama de Clases
 ```mermaid
 classDiagram
-    direction direction
+    direction TB
     
     class EstadoJuego {
         <<enumeration>>
@@ -60,7 +60,7 @@ classDiagram
         #String nombre
         #int salud
         +EntidadVideojuego(nombre: String, x: int, y: int, w: int, h: int, salud: int)
-        +actualizar() void*
+        +actualizar() void
         +getDistance(EntidadVideojuego otra) int
         +getNombre() String
         +getX() int
@@ -91,10 +91,12 @@ classDiagram
     }
 
     MotorJuego --> EstadoJuego : gestiona
-    MotorJuego "1" *-- "*" EntidadVideojuego : contiene
+    MotorJuego "1" *--> "*" EntidadVideojuego : contiene
     MotorJuego --> Jugador : referenciaDirecta
     EntidadVideojuego <|-- Jugador : hereda
     EntidadVideojuego <|-- Enemigo : hereda
+    Enemigo --> ComportamientoEnemigo : estadoIA
+    Main ..> MotorJuego : inicializa y simula
 
 ```mermaid
 graph LR
