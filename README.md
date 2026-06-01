@@ -16,4 +16,4 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
 * **`Enemigo`** (Hereda de `EntidadVideojuego`): Integra la lógica de comportamiento móvil (Estados: `PATRULLAR`, `PERSEGUIR`). Cambia su estado dinámicamente según la distancia Manhattan calculada respecto al jugador.
 
 
-![image](https://mermaidviewer.com/diagrams/3hkf_FK-ET4i76G-60Ko2)
+<img src="https://github.com/user-attachments/assets/ae08b920-3117-4e8f-b1b7-db1c2b9848b6" width="500" alt="Descripción de la imagen"/>
