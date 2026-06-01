@@ -19,6 +19,7 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
 
 ## 3. Diagramas UML (Mermaid)
 
+   classDiagram
     direction TB
     
     class EstadoJuego {
@@ -94,20 +95,5 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
     EntidadVideojuego <|-- Enemigo : hereda
     Enemigo --> ComportamientoEnemigo : estadoIA
     Main ..> MotorJuego : inicializa y simula
-
-graph LR
-    Jugador((Actor: Jugador))
-    
-    subgraph Motor de Juego 2D
-        CU1(CU-01: Iniciar Partida)
-        CU2(CU-02: Enviar Comando de Movimiento)
-        CU3(CU-03: Pausar/Reanudar Juego)
-        CU4(CU-04: Procesar Ciclo de Colisiones)
-    end
-    
-    Jugador --> CU1
-    Jugador --> CU2
-    Jugador --> CU3
-    CU2 ..> CU4 : <<include>>
 
 
