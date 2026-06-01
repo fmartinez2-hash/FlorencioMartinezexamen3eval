@@ -112,7 +112,3 @@ graph LR
     Jugador --> CU2
     Jugador --> CU3
     CU2 ..> CU4 : <<include>>
-    Jugador --> CU3
-    CU2 ..> CU4 : <<include>>
-    Enemigo --> ComportamientoEnemigo : estadoIA
-    Main ..> MotorJuego : inicializa y simula
