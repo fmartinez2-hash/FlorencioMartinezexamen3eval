@@ -45,3 +45,22 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
 | **Postcondiciones** | La coordenada del jugador se modifica y se evalúan los triggers de posición. |
 | **Reglas de Negocio** | Las dimensiones de la cuadrícula están acotadas de forma simulada; el jugador no puede salir de los límites de coordenadas definidos. |
 
+## 5. Bitácora del Uso de Inteligencia Artificial
+
+### Herramienta y Rol
+* **Herramienta:** ChatGPT (Modelo GPT-4o) / Claude 3.5 Sonnet.
+* **Rol de la IA:** Arquitecto de Software Experto en Java y Desarrollo de Videojuegos 2D.
+
+---
+
+### Muestra de Prompts Reales
+
+#### 🤖 Prompt 1 (Estructuración de Arquitectura)
+> **Usuario:** "Actúa como un ingeniero de software senior. Necesito diseñar la lógica de control en Java de un motor 2D en cuadrícula sin interfaz gráfica. Tengo una restricción estricta de máximo 6 clases. Necesito definir la clase abstracta EntidadVideojuego con campos (x, y, w, h, salud) y dos subclases: Jugador y Enemigo. El Enemigo debe cambiar su estado entre PATRULLAR y PERSEGUIR si la distancia al jugador es menor que 3 unidades. Genérame únicamente la estructura de firmas y métodos de estas entidades aplicando encapsulamiento."
+
+* **Impacto en el desarrollo:** Estableció la jerarquía de herencia base del proyecto y definió la lógica de cambio de estado de la IA del enemigo mediante la distancia de Manhattan, minimizando el acoplamiento entre las entidades desde la fase de diseño.
+
+#### 🤖 Prompt 2 (Optimización del Algoritmo de Colisión)
+> **Usuario:** "Escribe un método eficiente en Java dentro de la clase MotorJuego llamado comprobarColisiones(). Debe iterar sobre una lista de EntidadVideojuego utilizando bucles anidados para verificar si las cajas de colisión (AABB definidas por x, y, ancho, alto) se superponen. Si el Jugador colisiona con un Enemigo, debe restarle 20 puntos de vida al jugador e imprimir un log detallado."
+
+* **Impacto en el desarrollo:** Proporcionó la base algorítmica para la detección de colisiones por cajas del tipo *Axis-Aligned Bounding Box* (AABB), asegurando que el motor procese los daños en el ciclo de juego e interactúe correctamente con el estado vital de la entidad `Jugador`.
