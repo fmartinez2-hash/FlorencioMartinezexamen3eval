@@ -98,6 +98,7 @@ classDiagram
     Enemigo --> ComportamientoEnemigo : estadoIA
     Main ..> MotorJuego : inicializa y simula
 
+### B. Diagrama de Casos de Uso
 ```mermaid
 graph LR
     Jugador((Actor: Jugador))
