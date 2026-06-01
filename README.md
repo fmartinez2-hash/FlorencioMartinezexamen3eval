@@ -85,7 +85,3 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
 * **Impacto en el desarrollo:** Proporcionó la base algorítmica para la detección de colisiones por cajas del tipo *Axis-Aligned Bounding Box* (AABB), asegurando que el motor procese los daños en el ciclo de juego e interactúe correctamente con el estado vital de la entidad `Jugador`.
 
 
-1. **Creación de Funcionalidad:** Para trabajar en un nuevo módulo, se abre una rama específica desde integración:
-   ```bash
-   git checkout develop
-   git checkout -b feature/nombre-de-la-funcion
