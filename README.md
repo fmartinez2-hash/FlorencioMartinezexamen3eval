@@ -15,6 +15,10 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
 * **`Jugador`** (Hereda de `EntidadVideojuego`): Añade la gestión de energía y la capacidad de interactuar directamente con comandos de movimiento de la cuadrícula.
 * **`Enemigo`** (Hereda de `EntidadVideojuego`): Integra la lógica de comportamiento móvil (Estados: `PATRULLAR`, `PERSEGUIR`). Cambia su estado dinámicamente según la distancia Manhattan calculada respecto al jugador.
 
+<img src="https://github.com/user-attachments/assets/ae08b920-3117-4e8f-b1b7-db1c2b9848b6" width="500" alt="Descripción de la imagen"/>
+
+<img width="1104" height="698" alt="{E1170EED-8EEF-4A9C-A56C-F810A2C32C3E}" src="https://github.com/user-attachments/assets/c9bc47db-40b9-45f9-85d3-b8d164fb5949" />
+
 ## 4. Especificación de Casos de Uso
 
 ### CU-01: Iniciar Partida
