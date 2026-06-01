@@ -15,8 +15,7 @@ El sistema se ha diseñado bajo un enfoque minimalista de Programación Orientad
 * **`Jugador`** (Hereda de `EntidadVideojuego`): Añade la gestión de energía y la capacidad de interactuar directamente con comandos de movimiento de la cuadrícula.
 * **`Enemigo`** (Hereda de `EntidadVideojuego`): Integra la lógica de comportamiento móvil (Estados: `PATRULLAR`, `PERSEGUIR`). Cambia su estado dinámicamente según la distancia Manhattan calculada respecto al jugador.
 
----
-
+'''
 classDiagram
     direction TB
     
@@ -87,10 +86,10 @@ classDiagram
     }
 
     MotorJuego --> EstadoJuego : gestiona
-    MotorJuego "1" *-- "*" EntidadVideojuego : contiene
+    MotorJuego "1" *--> "*" EntidadVideojuego : contiene
     MotorJuego --> Jugador : referenciaDirecta
     EntidadVideojuego <|-- Jugador : hereda
     EntidadVideojuego <|-- Enemigo : hereda
     Enemigo --> ComportamientoEnemigo : estadoIA
     Main ..> MotorJuego : inicializa y simula
-
+'''
